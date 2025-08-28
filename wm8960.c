@@ -313,7 +313,7 @@ SOC_ENUM("DAC Mono Mix", wm8960_enum[7]),
 static const struct snd_kcontrol_new wm8960_lin_boost[] = {
 SOC_DAPM_SINGLE("LINPUT2 Switch", WM8960_LINPATH, 6, 1, 1),
 SOC_DAPM_SINGLE("LINPUT3 Switch", WM8960_LINPATH, 7, 1, 0),
-SOC_DAPM_SINGLE("LINPUT1 Switch", WM8960_LINPATH, 8, 1, 1),
+SOC_DAPM_SINGLE("LINPUT1 Switch", WM8960_LINPATH, 8, 1, 0),
 };
 
 static const struct snd_kcontrol_new wm8960_lin[] = {
@@ -323,7 +323,7 @@ SOC_DAPM_SINGLE("Boost Switch", WM8960_LINPATH, 3, 1, 0),
 static const struct snd_kcontrol_new wm8960_rin_boost[] = {
 SOC_DAPM_SINGLE("RINPUT2 Switch", WM8960_RINPATH, 6, 1, 1),
 SOC_DAPM_SINGLE("RINPUT3 Switch", WM8960_RINPATH, 7, 1, 0),
-SOC_DAPM_SINGLE("RINPUT1 Switch", WM8960_RINPATH, 8, 1, 1),
+SOC_DAPM_SINGLE("RINPUT1 Switch", WM8960_RINPATH, 8, 1, 0),
 };
 
 static const struct snd_kcontrol_new wm8960_rin[] = {
