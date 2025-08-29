@@ -111,8 +111,12 @@ if [[ $? -eq 0 ]]; then
   # Recent Raspbian has 64-bit kernel on 32-bit userspace
   apt-get -y install gcc-aarch64-linux-gnu
   # Ubuntu kernel packages
-  # apt-get -y install linux-raspi linux-headers-raspi linux-image-raspi
-  apt-get -y install linux-headers-rpi-v8 linux-image-rpi-v8
+  OS_ID=$(grep -Po '^ID=\K.*' /etc/os-release | tr -d '"')
+  if [ "$OS_ID" = "ubuntu" ]; then
+    echo "Current OS is Ubuntu"
+    # 后续可添加 Ubuntu 专属操作（如安装 Ubuntu 内核头文件）
+    apt-get -y install linux-raspi linux-headers-raspi linux-image-raspi
+  fi
   apt-get -y install dkms git i2c-tools libasound2-plugins
   # rpi-update checker
   check_kernel_headers
