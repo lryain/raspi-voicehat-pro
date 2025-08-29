@@ -81,12 +81,12 @@ echo "remove dkms"
 rm  -rf /var/lib/dkms/seeed-voicecard || true
 
 echo "remove kernel modules"
-rm  /lib/modules/*/kernel/sound/soc/codecs/snd-soc-wm8960.ko || true
-rm  /lib/modules/*/kernel/sound/soc/codecs/snd-soc-ac108.ko || true
-rm  /lib/modules/*/kernel/sound/soc/bcm/snd-soc-seeed-voicecard.ko || true
-rm  /lib/modules/*/updates/dkms/snd-soc-wm8960.ko || true
-rm  /lib/modules/*/updates/dkms/snd-soc-ac108.ko || true
-rm  /lib/modules/*/updates/dkms/snd-soc-seeed-voicecard.ko || true
+rm  /lib/modules/*/kernel/sound/soc/codecs/snd-soc-wm8960.ko.xz || true
+rm  /lib/modules/*/kernel/sound/soc/codecs/snd-soc-ac108.ko.xz || true
+rm  /lib/modules/*/kernel/sound/soc/bcm/snd-soc-seeed-voicecard.ko.xz || true
+rm  /lib/modules/*/updates/dkms/snd-soc-wm8960.ko.xz || true
+rm  /lib/modules/*/updates/dkms/snd-soc-ac108.ko.xz || true
+rm  /lib/modules/*/updates/dkms/snd-soc-seeed-voicecard.ko.xz || true
 
 echo "remove $CONFIG configuration"
 for i in $RPI_HATS; do
