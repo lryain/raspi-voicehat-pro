@@ -111,7 +111,8 @@ if [[ $? -eq 0 ]]; then
   # Recent Raspbian has 64-bit kernel on 32-bit userspace
   apt-get -y install gcc-aarch64-linux-gnu
   # Ubuntu kernel packages
-  apt-get -y install linux-raspi linux-headers-raspi linux-image-raspi
+  # apt-get -y install linux-raspi linux-headers-raspi linux-image-raspi
+  apt-get - install linux-headers-rpi-v8 linux-image-rpi-v8
   apt-get -y install dkms git i2c-tools libasound2-plugins
   # rpi-update checker
   check_kernel_headers
