@@ -7,6 +7,8 @@ Get the seeed voice card source code and install all linux kernel drivers
 ```bash
 git clone https://github.com/lryain/raspi-voicehat-pro
 cd raspi-voicehat-pro
+# checkout the correct version of your system
+git checkout v6.xx
 sudo ./install.sh
 sudo reboot
 ```
